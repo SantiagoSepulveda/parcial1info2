@@ -6,6 +6,9 @@ cc: 1022097969
 
 #include <iostream>
 #include <math.h>
+#define PI 3.1416
+#include <stdlib.h>
+
 using namespace std;
 
 
@@ -14,13 +17,12 @@ int main()
 {
     float g= 9.8;
     //datos cañon ofensivo
-    int Ho; float VoO; int alfa;
+    float Ho; float VoO; float alfa;
+    float x_ofensivo; float y_ofensivo;
 
+    alfa = (alfa*2*PI)/360;
 
-    float x_ofensivo;float y_ofensivo;
-
-
-    int Hd; int d; int VoD; float tiempo_o;
+    float Hd; float d; float VoD; float tiempo_o;
 
     cout << "Este programa realiza una serie de calculos en base al movimiento parabolico." << endl;
 
@@ -33,7 +35,7 @@ int main()
     cout << "ingrese la altura Ho del canon ofensivo: " << endl;
     cin >> Ho;
 
-    cout << "ingrese el angulo alfa del canon ofensivo: " << endl;
+    cout << "ingrese el angulo alfa en radianes del canon ofensivo: " << endl;
     cin >> alfa;
 
     cout << "ingrese el tiempo del canon ofensivo: " << endl;
@@ -43,7 +45,7 @@ int main()
     // Analisis para el disparo Ofensivo:
     // posicion eje horizoltal
 
-    x_ofensivo =  VoO*cos(alfa)*tiempo_o;
+    x_ofensivo =  0 + VoO*cos(alfa)*tiempo_o;
     cout << "la posocion en x del canon ofensivo es: " << x_ofensivo << endl;
 
     // posicion eje vertical
