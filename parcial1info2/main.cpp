@@ -5,13 +5,14 @@ cc: 1022097969
 */
 
 #include <iostream>
-
+#include <math.h>
 using namespace std;
 
 int main()
 {
     float g= 9.8;
     int Ho; int Hd; int d; int VoD; int alfa;
+    float x;
 
     cout << "Este programa realiza una serie de calculos en base al movimiento parabolico." << endl;
 
@@ -30,6 +31,9 @@ int main()
     cout << "ingrese el angulo alfa del canon ofensivo: " << endl;
     cin >> alfa;
 
+    // Analisis para el disparo ofensivo:
+
+    x = d + VoD*cos(alfa);
 
 
 
