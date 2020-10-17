@@ -14,36 +14,41 @@ int main()
 {
     float g= 9.8;
     //datos cañon ofensivo
-    int Ho; int VoO; int alfa;
+    int Ho; float VoO; int alfa;
 
 
-    float x;
+    float x_ofensivo;float y_ofensivo;
 
 
-    int Hd; int d; int VoD;
+    int Hd; int d; int VoD; float tiempo_o;
 
     cout << "Este programa realiza una serie de calculos en base al movimiento parabolico." << endl;
 
     cout << "ingrese la distancia d entre los dos canones: " << endl;
     cin >> d;
 
+    cout << "ingrese la velocidad Vo del canon ofensivo: " << endl;
+    cin >> VoO;
+
     cout << "ingrese la altura Ho del canon ofensivo: " << endl;
     cin >> Ho;
-
-    //cout << "ingrese la altura Hd del canon defensivo: " << endl;
-    //cin >> Hd;
-
-    //cout << "ingrese la velocidad inicial del canon defensivo: " << endl;
-    //cin >> VoD;
 
     cout << "ingrese el angulo alfa del canon ofensivo: " << endl;
     cin >> alfa;
 
+    cout << "ingrese el tiempo del canon ofensivo: " << endl;
+    cin >> tiempo_o;
+
+
     // Analisis para el disparo Ofensivo:
     // posicion eje horizoltal
-    x =  VoD*cos(alfa);
-    cout << "la posocion en x del canon ofensivo es: " << x << endl;
 
+    x_ofensivo =  VoO*cos(alfa)*tiempo_o;
+    cout << "la posocion en x del canon ofensivo es: " << x_ofensivo << endl;
+
+    // posicion eje vertical
+    y_ofensivo = Ho +(VoO*sin(alfa)-g*tiempo_o)*tiempo_o - (0.5*g*tiempo_o*tiempo_o);
+    cout << "la posocion en y del canon ofensivo es: " << y_ofensivo << endl;
 
 
     return 0;
