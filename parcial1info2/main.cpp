@@ -8,11 +8,19 @@ cc: 1022097969
 #include <math.h>
 using namespace std;
 
+
+
 int main()
 {
     float g= 9.8;
-    int Ho; int Hd; int d; int VoD; int alfa;
+    //datos cañon ofensivo
+    int Ho; int VoO; int alfa;
+
+
     float x;
+
+
+    int Hd; int d; int VoD;
 
     cout << "Este programa realiza una serie de calculos en base al movimiento parabolico." << endl;
 
@@ -22,18 +30,19 @@ int main()
     cout << "ingrese la altura Ho del canon ofensivo: " << endl;
     cin >> Ho;
 
-    cout << "ingrese la altura Hd del canon defensivo: " << endl;
-    cin >> Hd;
+    //cout << "ingrese la altura Hd del canon defensivo: " << endl;
+    //cin >> Hd;
 
-    cout << "ingrese la velocidad inicial del canon defensivo: " << endl;
-    cin >> VoD;
+    //cout << "ingrese la velocidad inicial del canon defensivo: " << endl;
+    //cin >> VoD;
 
     cout << "ingrese el angulo alfa del canon ofensivo: " << endl;
     cin >> alfa;
 
-    // Analisis para el disparo ofensivo:
-
-    x = d + VoD*cos(alfa);
+    // Analisis para el disparo Ofensivo:
+    // posicion eje horizoltal
+    x =  VoD*cos(alfa);
+    cout << "la posocion en x del canon ofensivo es: " << x << endl;
 
 
 
