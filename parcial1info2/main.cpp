@@ -11,16 +11,18 @@ cc: 1022097969
 
 using namespace std;
 
-
+float trayectoria_tiro_ofensivo(float x_ofensivo, float y_ofensivo);
 
 int main()
 {
     float g= 9.8;
     //datos cañon ofensivo
-    float Ho; float VoO; float alfa;
+    float Ho; float VoO; float alfa;float alfa1;
     float x_ofensivo; float y_ofensivo;
 
-    alfa = (alfa*2*PI)/360;
+    alfa1= (alfa*PI)/180;
+
+
 
     float Hd; float d; float VoD; float tiempo_o;
 
@@ -41,17 +43,21 @@ int main()
     cout << "ingrese el tiempo del canon ofensivo: " << endl;
     cin >> tiempo_o;
 
+    alfa1= (alfa*PI)/180;
+
 
     // Analisis para el disparo Ofensivo:
     // posicion eje horizoltal
 
-    x_ofensivo =  0 + VoO*cos(alfa)*tiempo_o;
+    x_ofensivo =  0 + VoO*cos(alfa1)*tiempo_o;
     cout << "la posocion en x del canon ofensivo es: " << x_ofensivo << endl;
 
     // posicion eje vertical
-    y_ofensivo = Ho +(VoO*sin(alfa)-g*tiempo_o)*tiempo_o - (0.5*g*tiempo_o*tiempo_o);
+    y_ofensivo = Ho +(VoO*sin(alfa1)-g*tiempo_o)*tiempo_o - (0.5*g*tiempo_o*tiempo_o);
     cout << "la posocion en y del canon ofensivo es: " << y_ofensivo << endl;
 
 
     return 0;
 }
+
+float trayectoria_tiro_ofensivo(float x_ofensivo, float y_ofensivo);
